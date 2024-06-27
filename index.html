@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Plan A Design Studio</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<script src="scripts/script.js"></script>
+		<script src="scripts/localeIndex.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<header>
+				<nav>
+					<a href="#" class="link active" aria-label="home">Home</a>
+					<span>•</span>
+					<a href="/about.html" class="link" aria-label="about_us"
+						>About Us</a
+					>
+					<span>•</span>
+					<a href="/projects.html" class="link" aria-label="projects"
+						>Projects</a
+					>
+					<span>•</span>
+					<a href="/contact.html" class="link" aria-label="contact_us"
+						>Contact Us</a
+					>
+					<span>•</span>
+					<a
+						href="?l=ar"
+						class="link"
+						aria-label="lang_switch"
+						id="lang-switch"
+						>العربية</a
+					>
+				</nav>
+				<nav class="mobile">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						onclick="toggleMenu()"
+					>
+						<path d="M4 6l16 0" />
+						<path d="M4 12l16 0" />
+						<path d="M4 18l16 0" />
+					</svg>
+				</nav>
+				<div class="sep">
+					<span class="line"></span>
+					<span class="window"></span>
+					<span class="line"></span>
+				</div>
+				<div class="logo">
+					<img
+						src="images/logo.svg"
+						onload="loadSVG(this)"
+						alt="logo"
+						class="logo-svg"
+					/>
+				</div>
+			</header>
+			<section class="hero-section">
+				<div class="img-container">
+					<img src="images/hero.png" width="500" height="430" />
+					<div class="sketch-line"></div>
+				</div>
+				<div class="hero-section-text">
+					<h1>
+						<span
+							><span aria-label="hero_1">Modern</span>
+							<span aria-label="hero_2">Interior</span></span
+						>
+						<span aria-label="hero_3">Design Studio</span>
+					</h1>
+					<p aria-label="hero_description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Molestias quasi, repellendus, dolorum officiis
+						magnam porro quod fugiat ducimus tempore ex provident
+						error.
+					</p>
+					<a href="/projects" class="btn">
+						<span aria-label="explore_more">Explore more</span>
+					</a>
+				</div>
+			</section>
+			<section class="section-2">
+				<div class="logo-img-container">
+					<div class="img-1">
+						<img src="/images/logo-container-1.png" />
+					</div>
+					<div class="sep"></div>
+					<div class="img-2">
+						<img src="/images/logo-container-2.png" />
+					</div>
+				</div>
+				<div class="section-2-text">
+					<div>
+						<h2>Elegant Design</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Repellat minima, officiis porro esse
+							accusantium accusamus aut maiores recusandae
+							possimus expedita.
+						</p>
+					</div>
+					<div>
+						<h2>Unique Style</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Repellat minima, officiis porro esse
+							accusantium accusamus aut maiores recusandae
+							possimus expedita.
+						</p>
+					</div>
+					<div>
+						<h2>Affordable</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Repellat minima, officiis porro esse
+							accusantium accusamus aut maiores recusandae
+							possimus expedita.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="section-3">
+				<img src="images/section-3.png" alt="section-3" />
+				<div class="section-3-text">
+					<h3 aria-label="cta"></h3>
+					<a href="/contact.html" class="btn">
+						<span aria-label="schedule_consultation"
+							>Schedule a consultation</span
+						>
+					</a>
+				</div>
+			</section>
+			<footer>
+				<div class="footer-inner-container">
+					<div class="footer-logo">
+						<img
+							src="images/logo.svg"
+							onload="loadSVG(this)"
+							alt="logo"
+							class="logo-svg"
+						/>
+					</div>
+					<div class="footer-info">
+						<div class="pre-line"></div>
+						<div class="details">
+							<a
+								aria-label="info_phone_number"
+								class="link phone"
+								href="tel:+962789808404"
+							>
+								+962 792 000 0000
+							</a>
+							<a
+								aria-label="info_email"
+								class="link"
+								href="mailto:info@planadesignstudio.com"
+								>info@planadesignstudio.com</a
+							>
+							<a
+								aria-label="info_address"
+								href="https://maps.app.goo.gl/vKaVsVj7tfBes3cF8"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link"
+							>
+								Mecca Street, Al Haraneh Complex, Building 150,
+								3th floor
+							</a>
+						</div>
+						<div class="post-line"></div>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<div id="menu">
+			<div class="close" onclick="toggleMenu()">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="28"
+					height="28"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M18 6l-12 12" />
+					<path d="M6 6l12 12" />
+				</svg>
+			</div>
+			<a href="#" class="link active" aria-label="home">Home</a>
+			<a href="/about.html" class="link" aria-label="about_us">
+				About Us
+			</a>
+			<a href="/projects.html" class="link" aria-label="projects">
+				Projects
+			</a>
+			<a href="/contact.html" class="link" aria-label="contact_us">
+				Contact Us
+			</a>
+			<a
+				href="?l=ar"
+				class="link"
+				aria-label="lang_switch"
+				id="lang-switch"
+			>
+				العربية
+			</a>
+		</div>
+	</body>
+</html>
