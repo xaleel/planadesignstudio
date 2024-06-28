@@ -16,6 +16,8 @@ html {
 body {
 	padding: 22px;
 	min-height: 100vh;
+	--margin: 8px;
+	margin: var(--margin);
 }
 
 body::-webkit-scrollbar {
@@ -162,7 +164,7 @@ nav.mobile {
 	text-decoration: none;
 	font-weight: 300;
 	position: relative;
-	transition: all 0.3s;
+	/* transition: all 0.3s; */
 	overflow: hidden;
 }
 
@@ -190,7 +192,7 @@ footer {
 	height: 250px;
 	width: calc(100vw - 8px);
 	background-color: var(--neutral);
-	--tr: calc((8px + 22px + 7px));
+	--tr: calc((var(--margin) + 22px + 7px));
 	transform: translate(calc(var(--tr) * -1), var(--tr));
 }
 
@@ -212,7 +214,7 @@ footer {
 	content: "";
 	position: absolute;
 	top: 0;
-	inset-inline-start: 30px;
+	inset-inline-start: calc(22px + var(--margin));
 	height: 100%;
 	width: 7px;
 	background-color: #fff;
@@ -298,6 +300,55 @@ footer {
 
 .footer-logo svg path:not(#path32) {
 	fill: #fff !important;
+}
+
+@media screen and (max-width: 1200px) {
+	main footer {
+		height: unset;
+	}
+
+	main footer .footer-inner-container {
+		gap: 24px;
+	}
+
+	main footer .footer-inner-container::before {
+		inset-inline-start: 8px;
+	}
+
+	main footer .footer-logo {
+		display: flex;
+		justify-content: center;
+	}
+
+	main footer .footer-logo svg {
+		position: static;
+		height: 130px;
+		transform: none;
+	}
+
+	main footer .footer-info,
+	main footer .footer-info .details {
+		flex-direction: column;
+		gap: 0;
+		padding: 0;
+		padding-inline: 10px;
+	}
+
+	main footer .footer-info .details {
+		gap: 12px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	main .footer-info .post-line {
+		width: 100%;
+		margin-top: 32px;
+		transform: translateX(-8px);
+	}
+
+	main .footer-info .post-line::before {
+		width: calc(100% - 2 * 28px);
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -480,54 +531,10 @@ footer {
 
 	main footer {
 		transform: translateX(-16px);
-		height: unset;
-		width: 100vw;
+		width: calc(100vw - 8px);
 	}
 
 	[dir="rtl"] main footer {
 		transform: translateX(15px);
-	}
-
-	main footer .footer-inner-container {
-		gap: 24px;
-	}
-
-	main footer .footer-inner-container::before {
-		inset-inline-start: 8px;
-	}
-
-	main footer .footer-logo {
-		display: flex;
-		justify-content: center;
-	}
-
-	main footer .footer-logo svg {
-		position: static;
-		height: 130px;
-		transform: none;
-	}
-
-	main footer .footer-info,
-	main footer .footer-info .details {
-		flex-direction: column;
-		gap: 0;
-		padding: 0;
-		padding-inline: 10px;
-	}
-
-	main footer .footer-info .details {
-		gap: 12px;
-		font-weight: 300;
-		text-align: center;
-	}
-
-	main .footer-info .post-line {
-		width: 100%;
-		margin-top: 32px;
-		transform: translateX(-8px);
-	}
-
-	main .footer-info .post-line::before {
-		width: calc(100% - 2 * 28px);
 	}
 }
