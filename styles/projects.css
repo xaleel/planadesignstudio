@@ -176,7 +176,7 @@ section {
 		width: 100%;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	.tabs-nav .pre-line,
