@@ -28,7 +28,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	const root = document.querySelector("html");
 	root.setAttribute("lang", locale);
 	root.setAttribute("dir", { en: "ltr", ar: "rtl" }[locale]);
-	document.getElementById("lang-switch").href = `?l=${otherLocale}`;
+	document
+		.querySelectorAll("#lang-switch")
+		.forEach((el) => (el.href = `?l=${otherLocale}`));
 	document.querySelectorAll("[aria-label").forEach((el) => {
 		el.innerText = window.t[locale][el.getAttribute("aria-label")] ?? "";
 	});

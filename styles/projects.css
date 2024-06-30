@@ -4,6 +4,7 @@ body {
 
 section {
 	min-height: 100vh;
+	padding-bottom: 4rem;
 }
 
 .tabs-nav {
@@ -157,7 +158,7 @@ section {
 
 @media screen and (max-width: 768px) {
 	.tabs-nav {
-		transform: none;
+		transform: none !important;
 		justify-content: center;
 		margin-top: 2rem;
 	}
@@ -177,6 +178,11 @@ section {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+	}
+
+	.thumbnails img {
+		width: 60px;
+		height: 60px;
 	}
 
 	.tabs-nav .pre-line,

@@ -58,6 +58,7 @@ article:nth-of-type(3)::after {
 	gap: 24px;
 	transform: translateX(calc((22px + 7px + 22px) * -1));
 	position: relative;
+	--h: 20px;
 }
 
 [dir="rtl"] .article-title {
@@ -65,7 +66,7 @@ article:nth-of-type(3)::after {
 }
 
 .article-title .pre-line {
-	height: 20px;
+	height: var(--h);
 	width: 100px;
 	background-color: var(--primary);
 }
@@ -75,9 +76,9 @@ article:nth-of-type(3)::after {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 22px;
+	inset-inline-start: 22px;
 	width: 7px;
-	height: 20px;
+	height: var(--h);
 	background-color: #fff;
 }
 
@@ -93,14 +94,14 @@ article:nth-of-type(3)::after {
 
 .article-title .post-line::before {
 	content: "";
-	height: 20px;
+	height: var(--h);
 	flex-grow: 1;
 	background-color: var(--primary);
 }
 
 .article-title .post-line::after {
 	content: "";
-	height: 20px;
+	height: var(--h);
 	width: 100px;
 	background-color: var(--primary);
 }
@@ -269,7 +270,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
 	section {
-		transform: none;
+		transform: none !important;
 	}
 
 	.article-2 {
@@ -277,9 +278,17 @@ h2 {
 		transform: translateX(-22px);
 	}
 
+	[dir="rtl"] .article-2 {
+		transform: translateX(22px);
+	}
+
 	.article-body {
 		transform: translateX(1vw);
 		width: 80vw;
+	}
+
+	[dir="rtl"] .article-body {
+		transform: translateX(-1vw);
 	}
 
 	.article-2 {
@@ -290,8 +299,11 @@ h2 {
 		transform: translateX(calc((44px + 7px) * -1));
 	}
 
+	[dir="rtl"] .logo-sketch {
+		transform: translateX(calc(44px + 7px));
+	}
+
 	.article-4 {
-		transform: none;
 		padding-bottom: 90px;
 		width: 94vw;
 	}
@@ -310,6 +322,23 @@ h2 {
 
 	.article-title {
 		width: 100vw;
+		overflow-x: hidden;
+		gap: 8px;
+		--h: 14px;
+	}
+
+	.pre-line {
+		width: 40px !important;
+		flex-shrink: 0;
+	}
+
+	.article-title .post-line {
+		gap: 30%;
+		height: 6px;
+	}
+
+	.article-title .post-line::after {
+		width: 10px;
 	}
 
 	.article-title h2 {
@@ -326,6 +355,11 @@ h2 {
 
 	.article-4 {
 		width: 92vw;
+		transform: translateX(-16px);
+	}
+
+	[dir="rtl"] .article-4 {
+		transform: translateX(16px);
 	}
 
 	.article-4 .f {
@@ -333,11 +367,16 @@ h2 {
 	}
 
 	.article-4 .f img {
-		width: 100px;
+		width: min(100px, 25vw);
 	}
 
 	.fe {
 		flex-direction: column;
 		margin-top: 96px;
+		margin-inline: auto;
+	}
+
+	body main footer {
+		width: calc(100vw + 8px);
 	}
 }
