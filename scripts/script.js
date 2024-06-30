@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	root.setAttribute("dir", { en: "ltr", ar: "rtl" }[locale]);
 	document.getElementById("lang-switch").href = `?l=${otherLocale}`;
 	document.querySelectorAll("[aria-label").forEach((el) => {
-		el.innerText = window.t[locale][el.getAttribute("aria-label")];
+		el.innerText = window.t[locale][el.getAttribute("aria-label")] ?? "";
 	});
 	document.querySelectorAll("[href").forEach((el) => {
 		if (el.id === "lang-switch") return;

@@ -1,0 +1,196 @@
+body {
+	--margin: 0px;
+}
+
+section {
+	min-height: 100vh;
+}
+
+.tabs-nav {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	transform: translateX(calc((22px + 7px + 22px) * -1));
+	position: relative;
+}
+
+[dir="rtl"] .tabs-nav {
+	transform: translateX(calc(22px + 7px + 22px));
+}
+
+.tabs-nav .pre-line {
+	height: 16px;
+	width: 100px;
+	background-color: var(--primary);
+}
+
+.tabs-nav .pre-line::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	inset-inline-start: 44px;
+	width: 7px;
+	height: 16px;
+	background-color: #fff;
+}
+
+.tabs-nav .post-line {
+	height: 8px;
+	flex-grow: 1;
+	background-color: var(--primary);
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 64px;
+}
+
+.tabs-nav .post-line::before {
+	content: "";
+	height: 16px;
+	flex-grow: 1;
+	background-color: var(--primary);
+}
+
+.tabs-nav .post-line::after {
+	content: "";
+	height: 16px;
+	width: 100px;
+	background-color: var(--primary);
+}
+
+.tabs-nav .nav {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.tabs-nav .nav .link {
+	cursor: pointer;
+	font-size: 24px;
+}
+
+.tabs-nav .nav > span {
+	width: 24px;
+	height: 8px;
+	background-color: var(--primary);
+}
+
+.tabs-container {
+	width: calc(100% - 48px);
+	margin-inline-start: 24px;
+	margin-top: 24px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.tabs {
+	width: calc(100% * var(--tab-count));
+	transform: translateX(calc((var(--on-tab) * -100%) / var(--tab-count)));
+	height: 100%;
+	transition: all 0.35s ease-in-out;
+	display: flex;
+}
+
+[dir="rtl"] .tabs {
+	transform: translateX(calc((var(--on-tab) * 100%) / var(--tab-count)));
+}
+
+.tabs .tab {
+	width: calc(100% / var(--tab-count));
+}
+
+.album {
+	display: flex;
+	gap: 24px;
+	position: relative;
+}
+
+.thumbnails {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.thumbnails img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 2px solid var(--primary);
+	cursor: pointer;
+}
+
+.thumbnails img.anim-in {
+	position: absolute;
+	left: 0;
+	cursor: auto;
+	border: none;
+}
+
+.preview {
+	flex-grow: 1;
+}
+
+.preview img {
+	width: 100%;
+}
+
+.tab h3 {
+	padding-inline-start: 126px;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+}
+
+.thumbnail {
+	filter: grayscale(100%);
+	transition: all 0.6s ease-in-out;
+}
+
+.thumbnail.active {
+	filter: grayscale(0%);
+}
+
+.preview img {
+	visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+	.tabs-nav {
+		transform: none;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	.tabs-nav .nav {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.album {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.thumbnails {
+		width: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.tabs-nav .pre-line,
+	.tabs-nav .post-line,
+	.anim-in,
+	.tabs-nav .nav > span {
+		display: none;
+	}
+
+	.preview img {
+		visibility: visible;
+	}
+
+	.tabs h3 {
+		padding-inline: 0;
+	}
+}

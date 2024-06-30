@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Plan A Design Studio</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/projects.css" />
+		<script src="scripts/script.js"></script>
+		<script src="scripts/localeProjects.js"></script>
+		<script src="scripts/projects.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+		/>
+	</head>
+	<body>
+		<main>
+			<header>
+				<nav>
+					<a href="/" class="link" aria-label="home">Home</a>
+					<span>•</span>
+					<a href="/about.html" class="link" aria-label="about_us"
+						>About Us</a
+					>
+					<span>•</span>
+					<a href="#" class="link active" aria-label="projects"
+						>Projects</a
+					>
+					<span>•</span>
+					<a href="/contact.html" class="link" aria-label="contact_us"
+						>Contact Us</a
+					>
+					<span>•</span>
+					<a
+						href="?l=ar"
+						class="link"
+						aria-label="lang_switch"
+						id="lang-switch"
+						>العربية</a
+					>
+				</nav>
+				<nav class="mobile">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						onclick="toggleMenu()"
+					>
+						<path d="M4 6l16 0" />
+						<path d="M4 12l16 0" />
+						<path d="M4 18l16 0" />
+					</svg>
+				</nav>
+				<div class="sep">
+					<span class="line"></span>
+					<span class="window"></span>
+					<span class="line"></span>
+				</div>
+				<div class="logo">
+					<img
+						src="images/logo.svg"
+						onload="loadSVG(this)"
+						alt="logo"
+						class="logo-svg"
+					/>
+				</div>
+			</header>
+			<section>
+				<div class="tabs-nav">
+					<div class="pre-line"></div>
+					<div class="nav">
+						<div
+							class="link active"
+							onclick="tabOnClick(this, 0)"
+							aria-label="residential"
+						></div>
+						<span></span>
+						<div
+							class="link"
+							onclick="tabOnClick(this, 1)"
+							aria-label="commercial"
+						></div>
+						<span></span>
+						<div
+							class="link"
+							onclick="tabOnClick(this, 2)"
+							aria-label="offices"
+						></div>
+					</div>
+					<div class="post-line"></div>
+				</div>
+				<div class="tabs-container">
+					<div id="fancybox" style="display: none">
+						<img src="" alt="" />
+					</div>
+					<div class="tabs" style="--tab-count: 3; --on-tab: 0">
+						<div class="tab">
+							<h3 id="desc-1"></h3>
+							<div class="album">
+								<div class="thumbnails">
+									<img
+										src="images/projects-residential/living_1.png"
+										alt="living room"
+										class="thumbnail active"
+									/>
+									<img
+										src="images/projects-residential/living_2.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-residential/living_4.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-residential/living_5.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-residential/bed_1.png"
+										alt="bed room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-residential/bed_2.png"
+										alt="bed room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-residential/guest.png"
+										alt="guest room"
+										class="thumbnail"
+									/>
+								</div>
+								<div class="preview">
+									<img
+										src="images/projects-residential/living_1.png"
+										alt="living room"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<h3 id="desc-2"></h3>
+							<div class="album">
+								<div class="thumbnails">
+									<img
+										src="images/projects-commercial/c1.png"
+										alt="living room"
+										class="thumbnail active"
+									/>
+									<img
+										src="images/projects-commercial/c2.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c3.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c4.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c5.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c6.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c7.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c8.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-commercial/c9.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+								</div>
+								<div class="preview">
+									<img
+										src="images/projects-commercial/c1.png"
+										alt="living room"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="tab">
+							<h3 id="desc-3"></h3>
+							<div class="album">
+								<div class="thumbnails">
+									<img
+										src="images/projects-office/o-1.png"
+										alt="living room"
+										class="thumbnail active"
+									/>
+									<img
+										src="images/projects-office/o-2.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-office/o-3.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-office/o-4.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-office/o-5.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+									<img
+										src="images/projects-office/o-6.png"
+										alt="living room"
+										class="thumbnail"
+									/>
+								</div>
+								<div class="preview">
+									<img
+										src="images/projects-office/o-1.png"
+										alt="living room"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="footer-inner-container">
+					<div class="footer-logo">
+						<img
+							src="images/logo.svg"
+							onload="loadSVG(this)"
+							alt="logo"
+							class="logo-svg"
+						/>
+					</div>
+					<div class="footer-info">
+						<div class="pre-line"></div>
+						<div class="details">
+							<a
+								aria-label="info_phone_number"
+								class="link"
+								href="tel:+9627920000000"
+							>
+								+962 792 000 0000
+							</a>
+							<a
+								aria-label="info_email"
+								class="link"
+								href="mailto:info@planadesignstudio.com"
+								>info@planadesignstudio.com</a
+							>
+							<a
+								aria-label="info_address"
+								href="https://maps.app.goo.gl/vKaVsVj7tfBes3cF8"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link"
+							>
+								Mecca Street, Al Haraneh Complex, Building 150,
+								3th floor
+							</a>
+						</div>
+						<div class="post-line"></div>
+					</div>
+				</div>
+			</footer>
+		</main>
+		<div id="menu">
+			<div class="close" onclick="toggleMenu()">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="28"
+					height="28"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path d="M18 6l-12 12" />
+					<path d="M6 6l12 12" />
+				</svg>
+			</div>
+			<a href="/" class="link" aria-label="home">Home</a>
+			<a href="/about.html" class="link" aria-label="about_us">
+				About Us
+			</a>
+			<a href="#" class="link active" aria-label="projects"> Projects </a>
+			<a href="/contact.html" class="link" aria-label="contact_us"
+				>Contact Us</a
+			>
+			<a
+				href="?l=ar"
+				class="link"
+				aria-label="lang_switch"
+				id="lang-switch"
+			>
+				العربية
+			</a>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</html>
