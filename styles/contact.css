@@ -111,3 +111,7 @@ footer {
 		white-space: nowrap;
 	}
 }
+
+body {
+	display: block !important;
+}

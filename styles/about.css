@@ -376,3 +376,7 @@ h2 {
 		margin-inline: auto;
 	}
 }
+
+body {
+	display: block !important;
+}

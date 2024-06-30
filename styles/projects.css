@@ -200,3 +200,7 @@ section {
 		padding-inline: 0;
 	}
 }
+
+body {
+	display: block !important;
+}
