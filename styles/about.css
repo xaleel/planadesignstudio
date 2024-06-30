@@ -327,7 +327,7 @@ h2 {
 		--h: 14px;
 	}
 
-	.pre-line {
+	.article-title .pre-line {
 		width: 40px !important;
 		flex-shrink: 0;
 	}
@@ -374,9 +374,5 @@ h2 {
 		flex-direction: column;
 		margin-top: 96px;
 		margin-inline: auto;
-	}
-
-	body main footer {
-		width: calc(100vw + 8px);
 	}
 }

@@ -531,10 +531,10 @@ footer {
 
 	main footer {
 		transform: translateX(-16px);
-		width: calc(100vw - 8px);
+		width: calc(100vw + 8px - var(--margin));
 	}
 
 	[dir="rtl"] main footer {
-		transform: translateX(15px);
+		transform: translateX(16px);
 	}
 }
