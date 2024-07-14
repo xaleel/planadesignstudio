@@ -29,8 +29,9 @@ section.hero-section .img-container {
 section.hero-section .img-container::after {
 	content: "";
 	position: absolute;
-	bottom: -7px;
-	left: -7px;
+	bottom: -6px;
+	left: -6px;
+	z-index: -1;
 	height: 220px;
 	width: 170px;
 	border: 0px solid var(--primary);
@@ -91,7 +92,7 @@ section.hero-section h1 > span:nth-child(1) > span:nth-child(1) {
 }
 
 section.hero-section p {
-	font-size: 22px;
+	font-size: 20px;
 	margin: 0;
 }
 

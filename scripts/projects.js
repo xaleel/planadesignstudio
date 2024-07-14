@@ -86,17 +86,15 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	setTimeout(() => {
-		if (window.innerWidth < 768) {
-			document.querySelectorAll(".preview img").forEach((el) => {
-				const a = document.createElement("a");
-				a.setAttribute("data-fancybox", "");
-				el.parentElement.appendChild(a);
-				a.appendChild(el);
-			});
-			Fancybox.bind("[data-fancybox]", {
-				//
-			});
-		}
+		document.querySelectorAll(".preview img").forEach((el) => {
+			const a = document.createElement("a");
+			a.setAttribute("data-fancybox", "");
+			el.parentElement.appendChild(a);
+			a.appendChild(el);
+		});
+		Fancybox.bind("[data-fancybox]", {
+			//
+		});
 	}, 250);
 });
 

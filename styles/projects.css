@@ -101,12 +101,6 @@ section {
 	width: calc(100% / var(--tab-count));
 }
 
-.album {
-	display: flex;
-	gap: 24px;
-	position: relative;
-}
-
 .thumbnails {
 	display: flex;
 	flex-direction: column;
@@ -137,7 +131,6 @@ section {
 }
 
 .tab h3 {
-	padding-inline-start: 126px;
 	font-weight: 400;
 	font-size: 24px;
 	text-align: center;
@@ -154,6 +147,67 @@ section {
 
 .preview img {
 	visibility: hidden;
+}
+
+.album-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 64px;
+	row-gap: 64px;
+}
+
+.imgs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-around;
+	row-gap: 32px;
+}
+
+.imgs a {
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+}
+
+.album-grid img {
+	border: 2px solid var(--primary);
+	height: 200px;
+	width: 200px;
+	box-shadow: 0px 0px 0px -2px #00000000;
+	transition: all 0.2s;
+	object-fit: cover;
+}
+
+.album-grid a:hover img,
+.album-grid a img:hover {
+	box-shadow: 3px 3px 8px -2px #00000080;
+}
+
+@media screen and (max-width: 1370px) {
+	.album-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 666px) {
+	.album-grid img {
+		height: 150px;
+		width: 150px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.album-grid img {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.imgs {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 12px;
+	}
 }
 
 @media screen and (max-width: 768px) {

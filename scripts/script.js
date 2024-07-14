@@ -43,3 +43,16 @@ window.addEventListener("DOMContentLoaded", () => {
 function toggleMenu() {
 	document.getElementById("menu").classList.toggle("open");
 }
+
+console.log(
+	` _   _      _ _       
+| | | |    | | |      
+| |_| | ___| | | ___  
+|  _  |/ _ \\ | |/ _ \\ 
+| | | |  __/ | | (_) |
+\\_| |_/\\___|_|_|\\___/
+
+Website made by Khaleel Jaber
+Check me out@
+khaleeljaber.com`
+);

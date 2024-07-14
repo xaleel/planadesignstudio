@@ -10,41 +10,10 @@ window.t = {
 		residential: "Residential",
 		commercial: "Commercial",
 		offices: "Offices",
-		proj_1_1: "Modern Residential Apartment (Amman)",
-		proj_1_2: "This villa was dreamt of as modern yet classy fantasy.",
-		proj_1_3: "Check out here how this dream became a reality.",
-		proj_1_4:
-			"Memories transform a bunch of walls and stones to a lovely home",
-		proj_1_5:
-			"Our client wanted their home to be comfortable while staying simple",
-		proj_1_6:
-			"This is one of our favorite projects. We hope you like it too!",
-		proj_1_7:
-			"This is where the guests are astonished by the beauty of the design",
-		proj_2_1: "S.B HAIR SALON",
-		proj_2_2: "Luxurious and durable; just like what our client wanted.",
-		proj_2_3:
-			"We gave that salon a touch of modernism that can be seen through the walls and furniture.",
-		proj_2_4:
-			"The design avoided cluttering in order to not to distract the eye from falling in love with the simplicity.",
-		proj_2_5: "B.B. Market",
-		proj_2_6:
-			"From the minute you step inside the market it’s clear to your eye what this place is about",
-		proj_2_7:
-			"Our team used the yellow color and natural wood as the main elements of the design.",
-		proj_2_8:
-			"Beautiful walls and eye-catching installments cement the identity colors all over the place",
-		proj_2_9: "Enjoy your coffee in a cozy and warm atmosphere :)",
-		proj_3_1: "MODERN LAW OFFICES",
-		proj_3_2:
-			"We gave their office the look and feel of their competitive advantage: Strength!",
-		proj_3_3:
-			"The lines are bold, the texture is thick, and the black all match perfectly with the wood.",
-		proj_3_4:
-			"The design gives an overwhelming feeling for what the brand really stands for",
-		proj_3_5: "OPEN SPACE OFFICE DESIGN",
-		proj_3_6:
-			"We designed the space to help produce everyday objects for everyone’s use, we made things lighter, softer, inclusive, generate energy, light space.",
+		residential_project_1: "Project 1",
+		residential_project_2: "Project 2",
+		residential_project_3: "Project 3",
+		residential_project_4: "Project 4",
 		// footer
 		info_phone_number: "+962 78 9808 404",
 		info_email: "info@planadesignstudio.com",
